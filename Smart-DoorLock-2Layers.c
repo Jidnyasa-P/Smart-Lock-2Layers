@@ -14,19 +14,20 @@ while (attempts > 0) {
     scanf("%d", &password);
 
     if (password == 6574) {
-        printf("Door is open\n");
+        printf("Door is opening...\n Security questions will be asked. \n Answer all the security questions to open the door.\n");
         break; // Exit the loop if the password is correct
     } else {
         attempts--;
         if (attempts > 0) {
-            printf("Incorrect password. ");
+            printf("Incorrect password... ");
             if (attempts > 1) {
                 printf("You have %d attempts left.\n", attempts);
             } else {
                 printf("You have 1 attempt left.\n");
             }
         } else {
-            printf("Door is locked, enter security questions.\n");
+            printf("Door is locked. Security will be called now.\n");
+            return 0;
         }
     }
 }
@@ -88,7 +89,7 @@ while (attempts > 0) {
         if (attempts > 0) {
             printf("Incorrect answer. You have %d attempts left.\n", attempts);
         } else {
-            printf("Answer is wrong. Security will be called now.\n");
+            printf("Door is locked. Security will be called now.\n");
             return 0; // Terminate the program if the answer is wrong 3 times
         }
     }
